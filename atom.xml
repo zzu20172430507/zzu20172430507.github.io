@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-07T13:50:16.212Z</updated>
+  <updated>2022-02-07T13:50:16.211Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,33 +17,10 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo测试</title>
-    <link href="http://example.com/posts/196c5604/"/>
-    <id>http://example.com/posts/196c5604/</id>
-    <published>2022-02-07T08:36:50.000Z</published>
-    <updated>2022-02-07T13:50:16.212Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一个测试</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这是一个测试&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="http://example.com/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://example.com/posts/4a17b156/"/>
     <id>http://example.com/posts/4a17b156/</id>
-    <published>2022-02-06T08:49:29.218Z</published>
+    <published>2022-02-09T13:08:56.978Z</published>
     <updated>2022-02-07T13:50:16.211Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
@@ -56,6 +33,34 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>聚类性能度量之Jaccard系数</title>
+    <link href="http://example.com/posts/196c5604/"/>
+    <id>http://example.com/posts/196c5604/</id>
+    <published>2022-02-07T08:36:50.000Z</published>
+    <updated>2022-02-09T13:28:33.685Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>聚类性能度量分为两个大类：</li></ol><p>   【1】聚类结果与参考模型比较，称为外部指标。</p><p>   【2】聚类结果直接考察，不参考外部模型，称为内部指标。</p><ol start="2"><li>Jaccard 系数是外部指标的一种</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;聚类性能度量分为两个大类：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;   【1】聚类结果与参考模型比较，称为外部指标。&lt;/p&gt;
+&lt;p&gt;   【2】聚类结果直接考察，不参考外部模型，称为内部指标。&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Jaccard 系数是外部指标的</summary>
+      
+    
+    
+    
+    
+    <category term="聚类" scheme="http://example.com/tags/%E8%81%9A%E7%B1%BB/"/>
     
   </entry>
   
