@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>聚类性能度量之Jaccard系数 | BUAA_LH_BLOG</title>
-  <meta name="description" content="聚类性能度量分为两个大类： 聚类结果与参考模型比较，称为外部指标。  聚类结果直接考察，不参考外部模型，称为内部指标。    ####本文主要记录外部指标中的Jaccard系数  Jaccard 系数是外部指标的一种。对于数据集D &#x3D; {x1,x2,…xm}，假定得到的聚类结果是C &#x3D;{C1,C2,…Ck}, 而参考模型给出的聚类结果是C* &#x3D; {C1*,C2*…Cs">
+  <title>Pytorch Autograd:自动微分 | BUAA_LH_BLOG</title>
+  <meta name="description" content="#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程 Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。 autograd.Variable 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="聚类性能度量之Jaccard系数">
-<meta property="og:url" content="http://example.com/posts/196c5604/index.html">
+<meta property="og:title" content="Pytorch Autograd:自动微分">
+<meta property="og:url" content="http://example.com/posts/bf5a0143/index.html">
 <meta property="og:site_name" content="BUAA LH&#39;s BLoG">
-<meta property="og:description" content="聚类性能度量分为两个大类： 聚类结果与参考模型比较，称为外部指标。  聚类结果直接考察，不参考外部模型，称为内部指标。    ####本文主要记录外部指标中的Jaccard系数  Jaccard 系数是外部指标的一种。对于数据集D &#x3D; {x1,x2,…xm}，假定得到的聚类结果是C &#x3D;{C1,C2,…Ck}, 而参考模型给出的聚类结果是C* &#x3D; {C1*,C2*…Cs">
+<meta property="og:description" content="#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程 Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。 autograd.Variable 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-07T08:36:50.000Z">
-<meta property="article:modified_time" content="2022-02-16T14:20:08.832Z">
+<meta property="article:published_time" content="2022-03-07T15:29:46.000Z">
+<meta property="article:modified_time" content="2022-03-07T15:36:49.309Z">
 <meta property="article:author" content="EURA">
-<meta property="article:tag" content="聚类">
+<meta property="article:tag" content="Pytorch 深度学习框架Pytorch入门与实践">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/posts/196c5604/index.html">
+  <link rel="canonical" href="http://example.com/posts/bf5a0143/index.html">
   
     <link rel="alternate" href="/atom.xml" title="BUAA LH&#39;s BLoG" type="application/atom+xml">
   
@@ -335,14 +335,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-聚类性能度量之Jaccard系数" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Pytorch-Autograd-自动微分" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      聚类性能度量之Jaccard系数
+      Pytorch Autograd:自动微分
     </h1>
   
 
@@ -350,15 +350,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/196c5604/" class="article-date">
-	  <time datetime="2022-02-07T08:36:50.000Z" itemprop="datePublished">2022-02-07</time>
+	<a href="/posts/bf5a0143/" class="article-date">
+	  <time datetime="2022-03-07T15:29:46.000Z" itemprop="datePublished">2022-03-07</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E8%81%9A%E7%B1%BB/" rel="tag">聚类</a>
+	<a class="article-tag-link-link" href="/tags/Pytorch-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6Pytorch%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/" rel="tag">Pytorch 深度学习框架Pytorch入门与实践</a>
   </span>
 
 
@@ -373,13 +373,13 @@
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/posts/196c5604/" class="leancloud_visitors"  data-flag-title="聚类性能度量之Jaccard系数">0</span>
+    	<span id="/posts/bf5a0143/" class="leancloud_visitors"  data-flag-title="Pytorch Autograd:自动微分">0</span>
     </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/196c5604/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/bf5a0143/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 146(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 144(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -389,14 +389,10 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="聚类性能度量分为两个大类："><a href="#聚类性能度量分为两个大类：" class="headerlink" title="聚类性能度量分为两个大类："></a>聚类性能度量分为两个大类：</h1><ul>
-<li><p>聚类结果与参考模型比较，称为<strong>外部指标</strong>。</p>
-</li>
-<li><p>聚类结果直接考察，不参考外部模型，称为<strong>内部指标</strong>。</p>
-</li>
-</ul>
-<hr>
-<p>####本文主要记录外部指标中的Jaccard系数<br>  Jaccard 系数是外部指标的一种。对于数据集D &#x3D; {x1,x2,…xm}，假定得到的聚类结果是C &#x3D;{C1,C2,…Ck}, 而参考模型给出的聚类结果是C* &#x3D; {C1*,C2*…Cs*}。相应的令lamda和lamda<em>表示C与C</em>的对应的簇标记向量。将样本两两配对考虑，</p>
+        <p>#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程</p>
+<p>Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。</p>
+<p><strong>autograd.Variable</strong> 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。</p>
+<p>Tensor封装为 <strong>autograd.Variable</strong> 后可以通过 <em>.backward</em> 来实现反向传播，自动计算所有梯度</p>
 
       
     </div>
@@ -406,7 +402,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/posts/196c5604/" title="聚类性能度量之Jaccard系数" target="_blank" rel="external">http://example.com/posts/196c5604/</a>
+      <a href="http://example.com/posts/bf5a0143/" title="Pytorch Autograd:自动微分" target="_blank" rel="external">http://example.com/posts/bf5a0143/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -452,10 +448,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/4a17b156/" title="Hello World"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/posts/6472aa38/" title="from __future__ import print_function用法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>

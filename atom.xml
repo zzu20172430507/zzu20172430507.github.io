@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-07T15:13:46.947Z</updated>
+  <updated>2022-03-07T15:36:49.309Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Pytorch Autograd:自动微分</title>
+    <link href="http://example.com/posts/bf5a0143/"/>
+    <id>http://example.com/posts/bf5a0143/</id>
+    <published>2022-03-07T15:29:46.000Z</published>
+    <updated>2022-03-07T15:36:49.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程</p><p>Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。</p><p><strong>autograd.Variable</strong> 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。</p><p>Tensor封装为 <strong>autograd.Variable</strong> 后可以通过 <em>.backward</em> 来实现反向传播，自动计算所有梯度</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程&lt;/p&gt;
+&lt;p&gt;Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算</summary>
+      
+    
+    
+    
+    
+    <category term="Pytorch 深度学习框架Pytorch入门与实践" scheme="http://example.com/tags/Pytorch-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6Pytorch%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>from __future__ import print_function用法</title>
     <link href="http://example.com/posts/6472aa38/"/>
     <id>http://example.com/posts/6472aa38/</id>
     <published>2022-03-07T15:06:31.000Z</published>
-    <updated>2022-03-07T15:13:46.947Z</updated>
+    <updated>2022-03-07T15:13:53.726Z</updated>
     
     <content type="html"><![CDATA[<p>在阅读《深度学习框架Pytorch入门与实践》第二章时，源码中出现了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br></pre></td></tr></table></figure><p>这是 **python2 ** 的语句，在python2中如果想超前使用python3的print函数，那么需要添加这一句</p><p>例如：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> <span class="string">&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure><p>在python2的版本中使用了上述的语句，则第二句的语法检查通过，第三句的语法检查不通过。</p><p>可参考链接</p><p><a href="https://zhuanlan.zhihu.com/p/28641474">知乎 from <strong>future</strong> import print_function用法</a></p>]]></content>
     
