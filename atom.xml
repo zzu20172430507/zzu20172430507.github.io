@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-07T15:36:49.309Z</updated>
+  <updated>2022-03-07T15:46:04.135Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/posts/bf5a0143/"/>
     <id>http://example.com/posts/bf5a0143/</id>
     <published>2022-03-07T15:29:46.000Z</published>
-    <updated>2022-03-07T15:36:49.309Z</updated>
+    <updated>2022-03-07T15:46:04.135Z</updated>
     
-    <content type="html"><![CDATA[<p>#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程</p><p>Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。</p><p><strong>autograd.Variable</strong> 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。</p><p>Tensor封装为 <strong>autograd.Variable</strong> 后可以通过 <em>.backward</em> 来实现反向传播，自动计算所有梯度</p>]]></content>
+    <content type="html"><![CDATA[<p>#####深度学习算法的本质是反向传播求导数，Pytorch作为目前比较好用的动态图求导框架，通过动态建立计算图来进行求导过程</p><p>Pytorch中的Autograd模块实现了该功能。在Tensor上的所有操作，Autograd都能为他们自动提供微分，避免手动计算的复杂过程。</p><p><strong>autograd.Variable</strong> 是 Autograd中的核心类。是Tensor的一种封装，并支持Tensor的所有操作。</p><p>Tensor封装为 <strong>autograd.Variable</strong> 后可以通过 <em>.backward</em> 来实现反向传播，自动计算所有梯度</p><img src="E:\blog\myblog\source\_posts\Pytorch-Autograd-自动微分\autograd.png" alt="autograd" style="zoom: 25%;" />]]></content>
     
     
       
