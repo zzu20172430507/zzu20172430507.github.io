@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-07T15:46:04.135Z</updated>
+  <updated>2022-03-07T15:49:27.375Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pic test</title>
+    <link href="http://example.com/posts/61c6b42f/"/>
+    <id>http://example.com/posts/61c6b42f/</id>
+    <published>2022-03-07T15:49:08.000Z</published>
+    <updated>2022-03-07T15:49:27.375Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/autograd.png" alt="auto"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/autograd.png&quot; alt=&quot;auto&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Pytorch Autograd:自动微分</title>
