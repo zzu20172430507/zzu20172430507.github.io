@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-07T15:51:52.490Z</updated>
+  <updated>2022-03-07T15:54:29.729Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://example.com/posts/61c6b42f/"/>
     <id>http://example.com/posts/61c6b42f/</id>
     <published>2022-03-07T15:49:08.000Z</published>
-    <updated>2022-03-07T15:51:52.490Z</updated>
+    <updated>2022-03-07T15:54:29.729Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/autograd.png" alt="auto"></p><p>this is a test of pic</p>]]></content>
+    <content type="html"><![CDATA[<img src="/posts/61c6b42f/blog\myblog\source\_posts\Pytorch-Autograd-自动微分\autograd.png" alt="auto" style="zoom:25%;"><p>this is a test of pic</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/autograd.png&quot; alt=&quot;auto&quot;&gt;&lt;/p&gt;
-&lt;p&gt;this is a test of pic&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;img src=&quot;/posts/61c6b42f/blog\myblog\source\_posts\Pytorch-Autograd-自动微分\autograd.png&quot; alt=&quot;auto&quot; style=&quot;zoom:25%;&quot;&gt;
+
+&lt;p&gt;this is a test of </summary>
       
     
     
