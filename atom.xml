@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-08T08:25:22.213Z</updated>
+  <updated>2022-04-26T07:16:22.003Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>凸包</title>
+    <link href="http://example.com/posts/898693c6/"/>
+    <id>http://example.com/posts/898693c6/</id>
+    <published>2022-04-23T06:41:35.000Z</published>
+    <updated>2022-04-26T07:16:22.003Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、-凸包概念"><a href="#一、-凸包概念" class="headerlink" title="一、 凸包概念"></a>一、 凸包概念</h1><p>什么是凸包（Convex Hull）？</p><p>凸多边形（Convex Polygon）：直观上说，一个凸多边形就是没有任何凹陷位的多边形</p><p>假设在一个多边形上（包括边界和所封的范围内）任意取两点并以一条线段连接两点，如果线段上每一点都在该多边形上 ，那么我们便说这个多边形是凸的。</p><p>凸包：给定平面上一个点集，这个点集的凸包是包含点集中的所有点的最小面积的凸多边形。</p><h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><p>给定一个二维vector点集</p><p><a href="https://leetcode-cn.com/problems/erect-the-fence/solution/">https://leetcode-cn.com/problems/erect-the-fence/solution/</a></p><h1 id="三、解决方法"><a href="#三、解决方法" class="headerlink" title="三、解决方法"></a>三、解决方法</h1><h4 id="Jarvis-算法"><a href="#Jarvis-算法" class="headerlink" title="Jarvis 算法"></a>Jarvis 算法</h4><p>从凸包中某一点开始，</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;一、-凸包概念&quot;&gt;&lt;a href=&quot;#一、-凸包概念&quot; class=&quot;headerlink&quot; title=&quot;一、 凸包概念&quot;&gt;&lt;/a&gt;一、 凸包概念&lt;/h1&gt;&lt;p&gt;什么是凸包（Convex Hull）？&lt;/p&gt;
+&lt;p&gt;凸多边形（Convex Polygon）：直观</summary>
+      
+    
+    
+    
+    
+    <category term="计算几何" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>torch.nn构建神经网络</title>

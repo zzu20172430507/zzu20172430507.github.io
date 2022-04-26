@@ -17,23 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>torch.nn构建神经网络 | BUAA_LH_BLOG</title>
-  <meta name="description" content="神经网络设计模块化—torch.nntorch.nn 构建于Autograd之上，用于定义和运行神经网络。nn.Module是其中重要的类。可以看成是一个网络的封装。包含网络各层定义以及forward方法，调用forward(input)方法可以返回前向传播的结果。以LeNet为例，介绍nn.Moudule如何实现。  定义网络12345678910111213141516171819202122">
+  <title>凸包 | BUAA_LH_BLOG</title>
+  <meta name="description" content="一、 凸包概念什么是凸包（Convex Hull）？ 凸多边形（Convex Polygon）：直观上说，一个凸多边形就是没有任何凹陷位的多边形 假设在一个多边形上（包括边界和所封的范围内）任意取两点并以一条线段连接两点，如果线段上每一点都在该多边形上 ，那么我们便说这个多边形是凸的。 凸包：给定平面上一个点集，这个点集的凸包是包含点集中的所有点的最小面积的凸多边形。 二、问题定义给定一个二维ve">
 <meta property="og:type" content="article">
-<meta property="og:title" content="torch.nn构建神经网络">
-<meta property="og:url" content="http://example.com/posts/6e6c5722/index.html">
+<meta property="og:title" content="凸包">
+<meta property="og:url" content="http://example.com/posts/898693c6/index.html">
 <meta property="og:site_name" content="BUAA LH&#39;s BLoG">
-<meta property="og:description" content="神经网络设计模块化—torch.nntorch.nn 构建于Autograd之上，用于定义和运行神经网络。nn.Module是其中重要的类。可以看成是一个网络的封装。包含网络各层定义以及forward方法，调用forward(input)方法可以返回前向传播的结果。以LeNet为例，介绍nn.Moudule如何实现。  定义网络12345678910111213141516171819202122">
+<meta property="og:description" content="一、 凸包概念什么是凸包（Convex Hull）？ 凸多边形（Convex Polygon）：直观上说，一个凸多边形就是没有任何凹陷位的多边形 假设在一个多边形上（包括边界和所封的范围内）任意取两点并以一条线段连接两点，如果线段上每一点都在该多边形上 ，那么我们便说这个多边形是凸的。 凸包：给定平面上一个点集，这个点集的凸包是包含点集中的所有点的最小面积的凸多边形。 二、问题定义给定一个二维ve">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images%5C012923_Ficx_876354.png">
-<meta property="article:published_time" content="2022-03-08T04:12:13.000Z">
-<meta property="article:modified_time" content="2022-03-08T08:25:22.213Z">
+<meta property="article:published_time" content="2022-04-23T06:41:35.000Z">
+<meta property="article:modified_time" content="2022-04-26T07:16:22.003Z">
 <meta property="article:author" content="EURA">
-<meta property="article:tag" content="Pytorch 深度学习框架Pytorch入门与实践">
+<meta property="article:tag" content="计算几何">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images%5C012923_Ficx_876354.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/posts/6e6c5722/index.html">
+  <link rel="canonical" href="http://example.com/posts/898693c6/index.html">
   
     <link rel="alternate" href="/atom.xml" title="BUAA LH&#39;s BLoG" type="application/atom+xml">
   
@@ -337,14 +335,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-torch-nn构建神经网络" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-凸包" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      torch.nn构建神经网络
+      凸包
     </h1>
   
 
@@ -352,15 +350,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/6e6c5722/" class="article-date">
-	  <time datetime="2022-03-08T04:12:13.000Z" itemprop="datePublished">2022-03-08</time>
+	<a href="/posts/898693c6/" class="article-date">
+	  <time datetime="2022-04-23T06:41:35.000Z" itemprop="datePublished">2022-04-23</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/Pytorch-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6Pytorch%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/" rel="tag">Pytorch 深度学习框架Pytorch入门与实践</a>
+	<a class="article-tag-link-link" href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="tag">计算几何</a>
   </span>
 
 
@@ -375,50 +373,29 @@
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/posts/6e6c5722/" class="leancloud_visitors"  data-flag-title="torch.nn构建神经网络">0</span>
+    	<span id="/posts/898693c6/" class="leancloud_visitors"  data-flag-title="凸包">0</span>
     </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/6e6c5722/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/898693c6/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 704(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 183(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="神经网络设计模块化—torch-nn"><a href="#神经网络设计模块化—torch-nn" class="headerlink" title="神经网络设计模块化—torch.nn"></a>神经网络设计模块化—torch.nn</h3><p>torch.nn 构建于Autograd之上，用于定义和运行神经网络。nn.Module是其中重要的类。可以看成是一个网络的封装。包含网络各层定义以及forward方法，调用forward(input)方法可以返回前向传播的结果。以LeNet为例，介绍nn.Moudule如何实现。</p>
-<p><img src="/images%5C012923_Ficx_876354.png" alt="这里写图片描述"></p>
-<h3 id="定义网络"><a href="#定义网络" class="headerlink" title="定义网络"></a>定义网络</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Net</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># nn.Module 子类的函数必须在构造函数中执行父类的构造函数</span></span><br><span class="line">        <span class="comment"># 下式等价于nn.Module.__init__(self)</span></span><br><span class="line">        <span class="built_in">super</span>(Net, self).__init__()</span><br><span class="line">        <span class="comment"># 卷积层1表示输入图片为单通道，6表示输出通道数</span></span><br><span class="line">        <span class="comment"># 5表示卷积核为5*5</span></span><br><span class="line">        self.conv1 = nn.Conv2d(<span class="number">1</span>,<span class="number">6</span>,<span class="number">5</span>)</span><br><span class="line">        <span class="comment"># 卷积层</span></span><br><span class="line">        self.conv2 = nn.Conv2d(<span class="number">6</span>,<span class="number">16</span>,<span class="number">5</span>)</span><br><span class="line">        <span class="comment"># 仿射层/全连接层，y = Wx+b</span></span><br><span class="line">        self.fc1 = nn.Linear(<span class="number">16</span>*<span class="number">5</span>*<span class="number">5</span>, <span class="number">120</span>)</span><br><span class="line">        self.fc2 = nn.Linear(<span class="number">120</span>,<span class="number">84</span>)</span><br><span class="line">        self.fc3 = nn.Linear(<span class="number">84</span>,<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self,x</span>):</span><br><span class="line">        <span class="comment"># 1. 卷积 2.激活 3.池化</span></span><br><span class="line">        x = F.max_pool2d(F.relu(self.conv1(x)),(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">        x = F.max_pool2d(F.relu(self.conv2(x)),<span class="number">2</span>)</span><br><span class="line">        <span class="comment"># reshape ，-1表示自适应</span></span><br><span class="line">        x = x.view(x.size()[<span class="number">0</span>],-<span class="number">1</span>)</span><br><span class="line">        x = F.relu(self.fc1(x))</span><br><span class="line">        x = F.relu(self.fc2(x))</span><br><span class="line">        x = self.fc3(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">net = Net()</span><br><span class="line"><span class="built_in">print</span>(net)</span><br></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Net(</span><br><span class="line">  (conv1): Conv2d(<span class="number">1</span>, <span class="number">6</span>, kernel_size=(<span class="number">5</span>, <span class="number">5</span>), stride=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">  (conv2): Conv2d(<span class="number">6</span>, <span class="number">16</span>, kernel_size=(<span class="number">5</span>, <span class="number">5</span>), stride=(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">  (fc1): Linear(in_features=<span class="number">400</span>, out_features=<span class="number">120</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (fc2): Linear(in_features=<span class="number">120</span>, out_features=<span class="number">84</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (fc3): Linear(in_features=<span class="number">84</span>, out_features=<span class="number">10</span>, bias=<span class="literal">True</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>只要在nn.Module中定义了forward函数，backward函数就会被自动实现。在forward中可以使用任意Variable中支持的函数，也可使用python语法和标准python语法一致。</p>
-<h3 id="网络参数"><a href="#网络参数" class="headerlink" title="网络参数"></a>网络参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">params = net.parameters()</span><br><span class="line"><span class="comment"># print(params)</span></span><br><span class="line">params = <span class="built_in">list</span>(params)</span><br><span class="line"><span class="comment"># print(params)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(params))</span><br><span class="line"><span class="comment"># 使用net.parameters()可返回网络参数，net.named_parameters()可返回学习参数的名称及参数</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name, parameters <span class="keyword">in</span> net.named_parameters():</span><br><span class="line">    <span class="built_in">print</span>(name, <span class="string">&#x27;:&#x27;</span>, parameters.size())</span><br><span class="line"><span class="comment"># 输出结果：</span></span><br><span class="line">conv1.weight : torch.Size([<span class="number">6</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">5</span>])</span><br><span class="line">conv1.bias : torch.Size([<span class="number">6</span>])</span><br><span class="line">conv2.weight : torch.Size([<span class="number">16</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">5</span>])</span><br><span class="line">conv2.bias : torch.Size([<span class="number">16</span>])</span><br><span class="line">fc1.weight : torch.Size([<span class="number">120</span>, <span class="number">400</span>])</span><br><span class="line">fc1.bias : torch.Size([<span class="number">120</span>])</span><br><span class="line">fc2.weight : torch.Size([<span class="number">84</span>, <span class="number">120</span>])</span><br><span class="line">fc2.bias : torch.Size([<span class="number">84</span>])</span><br><span class="line">fc3.weight : torch.Size([<span class="number">10</span>, <span class="number">84</span>])</span><br><span class="line">fc3.bias : torch.Size([<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
-
-<p><em>注：forward函数的输入和输出都要是Variable，才能进行自动求导，在输入时要把Tensor封装成Variable</em></p>
-<p>例如</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">input</span> = Variable(t.randn(<span class="number">1</span>,<span class="number">1</span>,<span class="number">32</span>,<span class="number">32</span>))</span><br><span class="line">out = net(<span class="built_in">input</span>)</span><br><span class="line"><span class="built_in">print</span>(out.size())</span><br><span class="line"><span class="comment"># 结果：torch.Size([1, 10])</span></span><br><span class="line">net.zero_grad()</span><br><span class="line">out.backward(Variable(t.ones(<span class="number">1</span>,<span class="number">10</span>))) <span class="comment"># 反向传播</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>nn实现了神经网络中大多数的损失函数，例如nn.MSELoss均方误差, nn.CrossEntropyLoss交叉熵</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">output = net(<span class="built_in">input</span>)</span><br><span class="line">target = Variable(t.arange(<span class="number">0</span>,<span class="number">10</span>))</span><br><span class="line">criterion = nn.MSELoss()</span><br><span class="line">loss = criterion(output, target)</span><br><span class="line"><span class="built_in">print</span>(loss)</span><br><span class="line"><span class="comment"># 输出结果：tensor(28.3689, grad_fn=&lt;MseLossBackward0&gt;)</span></span><br></pre></td></tr></table></figure>
-
-<p>当调用loss.backward()时，该图会自动生成并自动微分，也会自动计算图中参数的导数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">net.zero_grad()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;反向传播前梯度：&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(net.conv1.bias.grad)</span><br><span class="line">loss.backward()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;反向传播后梯度：&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(net.conv1.bias.grad)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
+        <h1 id="一、-凸包概念"><a href="#一、-凸包概念" class="headerlink" title="一、 凸包概念"></a>一、 凸包概念</h1><p>什么是凸包（Convex Hull）？</p>
+<p>凸多边形（Convex Polygon）：直观上说，一个凸多边形就是没有任何凹陷位的多边形</p>
+<p>假设在一个多边形上（包括边界和所封的范围内）任意取两点并以一条线段连接两点，如果线段上每一点都在该多边形上 ，那么我们便说这个多边形是凸的。</p>
+<p>凸包：给定平面上一个点集，这个点集的凸包是包含点集中的所有点的最小面积的凸多边形。</p>
+<h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><p>给定一个二维vector点集</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/erect-the-fence/solution/">https://leetcode-cn.com/problems/erect-the-fence/solution/</a></p>
+<h1 id="三、解决方法"><a href="#三、解决方法" class="headerlink" title="三、解决方法"></a>三、解决方法</h1><h4 id="Jarvis-算法"><a href="#Jarvis-算法" class="headerlink" title="Jarvis 算法"></a>Jarvis 算法</h4><p>从凸包中某一点开始，</p>
 
       
     </div>
@@ -428,7 +405,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/posts/6e6c5722/" title="torch.nn构建神经网络" target="_blank" rel="external">http://example.com/posts/6e6c5722/</a>
+      <a href="http://example.com/posts/898693c6/" title="凸包" target="_blank" rel="external">http://example.com/posts/898693c6/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -474,13 +451,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/898693c6/" title="凸包"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/bf5a0143/" title="Pytorch Autograd:自动微分"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/6e6c5722/" title="torch.nn构建神经网络"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
