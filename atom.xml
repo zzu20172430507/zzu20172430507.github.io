@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-26T07:16:22.003Z</updated>
+  <updated>2022-04-26T07:41:13.631Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 398 随机数索引</title>
+    <link href="http://example.com/posts/664143fc/"/>
+    <id>http://example.com/posts/664143fc/</id>
+    <published>2022-04-25T10:45:35.000Z</published>
+    <updated>2022-04-26T07:41:13.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>题号：398</p><p>题目链接：<a href="https://leetcode-cn.com/problems/random-pick-index/">https://leetcode-cn.com/problems/random-pick-index/</a></p><p>难度：中等</p><p>题意：给一个整数数组nums和一个target，随即输出给定目标数字target的索引。（假定给定的数字一定在数组中且可能由重复元素）要求实现一个solution类</p><p>题解：<a href="https://leetcode-cn.com/problems/random-pick-index/solution/sui-ji-shu-suo-yin-by-leetcode-solution-ofsq/">https://leetcode-cn.com/problems/random-pick-index/solution/sui-ji-shu-suo-yin-by-leetcode-solution-ofsq/</a></p><p>Solution 1：哈希（空间换时间）</p><p>存所有元素对应的下标，元素x对应下标为一个vector，从vector中随机返回一个数</p><p>Solution 2：水塘抽样（时间换空间）</p><p>如果数组以文件的形式存储，那么我们无法把所有的数存在内存里，因此要找一种空间复杂度更低的算法</p><p>在第i次遇到值为target的元素时，随机从[0,i）中选择一个整数，如果其等于0，则返回值为该元素的下标，否则返回值不变</p><p>class Solution {<br>    vector<int> &amp;nums;<br>public:<br>    Solution(vector<int> &amp;nums) : nums(nums) {}    </p><pre><code>int pick(int target) &#123;    int ans;    for (int i = 0, cnt = 0; i &lt; nums.size(); ++i) &#123;        if (nums[i] == target) &#123;            ++cnt; // 第 cnt 次遇到 target            if (rand() % cnt == 0) &#123;                ans = i;            &#125;        &#125;    &#125;    return ans;&#125;</code></pre><p>};</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;题号：398&lt;/p&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/random-pick-index/&quot;&gt;https://leetcode-cn.com/problems/random-pick-index/&lt;/a&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>凸包</title>
     <link href="http://example.com/posts/898693c6/"/>
     <id>http://example.com/posts/898693c6/</id>
     <published>2022-04-23T06:41:35.000Z</published>
-    <updated>2022-04-26T07:16:22.003Z</updated>
+    <updated>2022-04-26T07:16:28.586Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一、-凸包概念"><a href="#一、-凸包概念" class="headerlink" title="一、 凸包概念"></a>一、 凸包概念</h1><p>什么是凸包（Convex Hull）？</p><p>凸多边形（Convex Polygon）：直观上说，一个凸多边形就是没有任何凹陷位的多边形</p><p>假设在一个多边形上（包括边界和所封的范围内）任意取两点并以一条线段连接两点，如果线段上每一点都在该多边形上 ，那么我们便说这个多边形是凸的。</p><p>凸包：给定平面上一个点集，这个点集的凸包是包含点集中的所有点的最小面积的凸多边形。</p><h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><p>给定一个二维vector点集</p><p><a href="https://leetcode-cn.com/problems/erect-the-fence/solution/">https://leetcode-cn.com/problems/erect-the-fence/solution/</a></p><h1 id="三、解决方法"><a href="#三、解决方法" class="headerlink" title="三、解决方法"></a>三、解决方法</h1><h4 id="Jarvis-算法"><a href="#Jarvis-算法" class="headerlink" title="Jarvis 算法"></a>Jarvis 算法</h4><p>从凸包中某一点开始，</p>]]></content>
     
