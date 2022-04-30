@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档 | BLOG</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="BUAA LH&#39;s BLoG">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <title>vector or 数组求最值函数--max_element()/min_element() | BLOG</title>
+  <meta name="description" content="leetcode 908 题目链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;smallest-range-i&#x2F; 当数组最大值减最小值大于等于k*2时，return 0， 当数组最大值减最小值小于k*2时返回max-min-k*2 因此要求vector最值，比较懒，因此在此记录max_element()和min_element()的用法 123vector&lt;int&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vector or 数组求最值函数--max_element()&#x2F;min_element()">
+<meta property="og:url" content="http://example.com/posts/195fb553/index.html">
 <meta property="og:site_name" content="BUAA LH&#39;s BLoG">
+<meta property="og:description" content="leetcode 908 题目链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;smallest-range-i&#x2F; 当数组最大值减最小值大于等于k*2时，return 0， 当数组最大值减最小值小于k*2时返回max-min-k*2 因此要求vector最值，比较懒，因此在此记录max_element()和min_element()的用法 123vector&lt;int&amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-30T08:12:28.000Z">
+<meta property="article:modified_time" content="2022-04-30T08:20:06.998Z">
 <meta property="article:author" content="EURA">
+<meta property="article:tag" content="C++ Vector">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/archives/index.html">
+  <link rel="canonical" href="http://example.com/posts/195fb553/index.html">
   
     <link rel="alternate" href="/atom.xml" title="BUAA LH&#39;s BLoG" type="application/atom+xml">
   
@@ -329,138 +334,199 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档</h1>
-	      <p class="text-muted">共 10 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-vector-or-数组求最值函数-max-element-min-element" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      vector or 数组求最值函数--max_element()/min_element()
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/195fb553/" class="article-date">
+	  <time datetime="2022-04-30T08:12:28.000Z" itemprop="datePublished">2022-04-30</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/C-Vector/" rel="tag">C++ Vector</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/posts/195fb553/" class="leancloud_visitors"  data-flag-title="vector or 数组求最值函数--max_element()/min_element()">0</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/195fb553/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 192(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <hr>
+<p>leetcode 908</p>
+<p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/smallest-range-i/">https://leetcode-cn.com/problems/smallest-range-i/</a></p>
+<p>当数组最大值减最小值大于等于k*2时，return 0， 当数组最大值减最小值小于k*2时返回max-min-k*2</p>
+<p>因此要求vector最值，比较懒，因此在此记录max_element()和min_element()的用法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v</span><br><span class="line"><span class="type">int</span> max = *<span class="built_in">max_element</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>());</span><br><span class="line"><span class="type">int</span> min = *<span class="built_in">min_element</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
+
+<p>同理对于一般的数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">6</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;</span><br><span class="line"><span class="type">int</span> max = *<span class="built_in">max_element</span>(a,a+<span class="number">6</span>);</span><br><span class="line"><span class="type">int</span> min = *<span class="built_in">min_element</span>(a,a+<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<p>其中max_element()和min_element()返回的是最大值最小值的地址，要获得下标的话可以减去起始地址即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int max_pos = max_element(v.begin(),v.end()) - v.begin();</span><br><span class="line">int min_pos = min_element(v.begin(),v.end()) - v.begin();</span><br><span class="line">int max_pos = max_element(a,a+6) - a;</span><br><span class="line">int min_pos = min_element(a,a+6) - a;</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/posts/195fb553/" title="vector or 数组求最值函数--max_element()/min_element()" target="_blank" rel="external">http://example.com/posts/195fb553/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/zzu20172430507" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/zzu20172430507" target="_blank"><span class="text-dark">Eura</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2022" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2022
-            </a>
-            <!-- <a href="/archives/2022" class="archive-year">2022</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/664143fc/" title="leetcode 398 随机数索引"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2022" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2022">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/posts/195fb553/" class="collection-item"   itemprop="url">
-  <time datetime="2022-04-30T08:12:28.000Z" itemprop="datePublished">2022-04-30</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> vector or 数组求最值函数--max_element()/min_element()
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-    
-    
-    
-<a href="/posts/664143fc/" class="collection-item"   itemprop="url">
-  <time datetime="2022-04-25T10:45:35.000Z" itemprop="datePublished">2022-04-25</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> leetcode 398 随机数索引
-</a>
 
-
-  
-    
-    
-    
-<a href="/posts/898693c6/" class="collection-item"   itemprop="url">
-  <time datetime="2022-04-23T06:41:35.000Z" itemprop="datePublished">2022-04-23</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 凸包
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/6e6c5722/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-08T04:12:13.000Z" itemprop="datePublished">2022-03-08</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> torch.nn构建神经网络
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/bf5a0143/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-07T15:29:46.000Z" itemprop="datePublished">2022-03-07</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Pytorch Autograd:自动微分
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/6472aa38/" class="collection-item"   itemprop="url">
-  <time datetime="2022-03-07T15:06:31.000Z" itemprop="datePublished">2022-03-07</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> from __future__ import print_function用法
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/115f9f7/" class="collection-item"   itemprop="url">
-  <time datetime="2022-02-16T10:34:55.000Z" itemprop="datePublished">2022-02-16</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Markdown使用技巧
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/148bd129/" class="collection-item"   itemprop="url">
-  <time datetime="2022-02-10T07:45:47.000Z" itemprop="datePublished">2022-02-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> CFL实验记录-2022-02-10
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/4a17b156/" class="collection-item"   itemprop="url">
-  <time datetime="2022-02-09T13:08:56.978Z" itemprop="datePublished">2022-02-09</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/196c5604/" class="collection-item"   itemprop="url">
-  <time datetime="2022-02-07T08:36:50.000Z" itemprop="datePublished">2022-02-07</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 聚类性能度量之Jaccard系数
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -515,6 +581,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: true,
+    appId: 'CruwxWQistSgJ7HHKoWBmijn-gzGzoHsz',
+    appKey: 'XAgrKRXi1oQHd2k2surTfwB8',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+  </script>
+
+     
 
 
 

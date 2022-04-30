@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-26T07:41:13.631Z</updated>
+  <updated>2022-04-30T08:20:06.998Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vector or 数组求最值函数--max_element()/min_element()</title>
+    <link href="http://example.com/posts/195fb553/"/>
+    <id>http://example.com/posts/195fb553/</id>
+    <published>2022-04-30T08:12:28.000Z</published>
+    <updated>2022-04-30T08:20:06.998Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>leetcode 908</p><p>题目链接：<a href="https://leetcode-cn.com/problems/smallest-range-i/">https://leetcode-cn.com/problems/smallest-range-i/</a></p><p>当数组最大值减最小值大于等于k*2时，return 0， 当数组最大值减最小值小于k*2时返回max-min-k*2</p><p>因此要求vector最值，比较懒，因此在此记录max_element()和min_element()的用法</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v</span><br><span class="line"><span class="type">int</span> max = *<span class="built_in">max_element</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>());</span><br><span class="line"><span class="type">int</span> min = *<span class="built_in">min_element</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure><p>同理对于一般的数组</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">6</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;</span><br><span class="line"><span class="type">int</span> max = *<span class="built_in">max_element</span>(a,a+<span class="number">6</span>);</span><br><span class="line"><span class="type">int</span> min = *<span class="built_in">min_element</span>(a,a+<span class="number">6</span>);</span><br></pre></td></tr></table></figure><p>其中max_element()和min_element()返回的是最大值最小值的地址，要获得下标的话可以减去起始地址即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int max_pos = max_element(v.begin(),v.end()) - v.begin();</span><br><span class="line">int min_pos = min_element(v.begin(),v.end()) - v.begin();</span><br><span class="line">int max_pos = max_element(a,a+6) - a;</span><br><span class="line">int min_pos = min_element(a,a+6) - a;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;leetcode 908&lt;/p&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/smallest-range-i/&quot;&gt;https://leetcode-cn.com/problems/smallest-rang</summary>
+      
+    
+    
+    
+    
+    <category term="C++ Vector" scheme="http://example.com/tags/C-Vector/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 398 随机数索引</title>
